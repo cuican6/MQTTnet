@@ -142,6 +142,12 @@ namespace MQTTnet.Implementations
             set => _socket.SendTimeout = value;
         }
 
+        public int ReceiveTimeout
+        {
+            get => _socket.ReceiveTimeout;
+            set => _socket.ReceiveTimeout = value;
+        }
+
         public async Task<CrossPlatformSocket> AcceptAsync()
         {
             try
